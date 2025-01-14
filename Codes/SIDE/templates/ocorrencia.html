@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Estilos para o retângulo com o nome do usuário */
+        .user-info {
+            position: fixed;
+            top: 60px;
+            left: 10px;
+            padding: 10px 20px;
+            background-color: #f8f9fa;
+            border: 2px solid #05101b;
+            border-radius: 5px;
+            z-index: 1000;
+            font-size: 16px;
+            font-weight: bold;
+            color: #05101b;
+        }
+        .navbar {
+            background: linear-gradient(135deg, #034d92, #57a7f1); /* Gradiente de azul */
+        }
+        .navbar a {
+            color: #fff !important; /* Cor branca para os links */
+        }
+        .navbar a:hover {
+            color: #f8f9fa !important; /* Cor mais clara ao passar o mouse */
+            text-decoration: underline;
+        }
+        .navbar-brand {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        .nav-link {
+            font-size: 1.1em;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+        .navbar-toggler-icon {
+            background-color: #fff; /* Cor do ícone do menu */
+        }
+        .navbar-user {
+        display: flex;
+        flex-direction: column; /* Faz o texto ser exibido em colunas */
+        justify-content: center;
+        align-items: center; /* Centraliza o conteúdo */
+        font-size: 1.0em;
+        margin-left: 8px;
+        margin-right: 8px;
+        font-weight: normal;
+    }
+
+        .navbar-user span {
+            color: white; /* Cor branca para o texto */
+            text-align: center; /* Centraliza o conteúdo do span */
+            margin: 10; /* Remove qualquer margem padrão do span */
+        }
+    </style>
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <!-- Nome do site -->
+        <a class="navbar-brand" href="{{ url_for('menu') }}"> Mantiqueira - Primavera do Leste</a>
+
+        <!-- Ícone para abrir o menu em telas pequenas -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Itens do menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto"> <!-- ms-auto para alinhar à direita -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('consultar') }}">
+                        <i class="fas fa-search"></i> Consultar
+                    </a>
+                </li>
+                {% if g.username != 'consulta' %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('cadastro') }}">
+                        <i class="fas fa-user-plus"></i> Nova Ocorrência
+                    </a>
+                </li>
+                {% endif %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('logout') }}">
+                        <i class="fa fa-home" aria-hidden="true"></i> Logout
+                    </a>
+                </li>
+                <li class="nav-item navbar-user">
+                    <span>  </span>
+                </li>
+                <li class="nav-item navbar-user">
+                    <span>login:<br>{{ g.username }}</span>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div class="container d-flex justify-content-center align-items-center vh-100" style="position: relative;">
+        <div class="card p-4 shadow-lg" style="position: absolute; top: 3%; width: 100%; max-width: 1800px; border: 3px solid #57a7f1; border-radius: 20px;">
+        <h2>Cadastro Motorista</h2>
+        <form method="POST">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome do Motorista</label>
+                <input type="text" id="nome" name="nome" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="placav" class="form-label">Placa do Veículo</label>
+                <input type="text" id="placav" name="placav" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="placac" class="form-label">Placa Cavalo</label>
+                <input type="text" id="placac" name="placac" class="form-control" required>
+            </div>
+
+            
+            
+
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+        <hr>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

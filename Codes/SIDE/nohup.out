@@ -1,0 +1,1208 @@
+ * Serving Flask app 'app2'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.5:5000
+Press CTRL+C to quit
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 615-630-138
+192.168.5.209 - - [12/Dec/2024 16:01:03] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [12/Dec/2024 16:01:14] "POST /cadastro HTTP/1.1" 302 -
+192.168.5.209 - - [12/Dec/2024 16:01:14] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [12/Dec/2024 16:08:42] "GET /logout HTTP/1.1" 302 -
+192.168.5.209 - - [12/Dec/2024 16:08:42] "GET / HTTP/1.1" 200 -
+192.168.5.209 - - [12/Dec/2024 16:08:42] "GET /static/img.png HTTP/1.1" 304 -
+192.168.5.209 - - [12/Dec/2024 16:08:54] "POST / HTTP/1.1" 302 -
+192.168.5.209 - - [12/Dec/2024 16:08:54] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [12/Dec/2024 16:09:21] "POST /cadastro HTTP/1.1" 302 -
+192.168.5.209 - - [12/Dec/2024 16:09:21] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [12/Dec/2024 16:09:24] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [12/Dec/2024 16:09:35] "GET /consultar?edit=true HTTP/1.1" 200 -
+192.168.5.209 - - [12/Dec/2024 16:09:41] "POST /consultar?edit=true HTTP/1.1" 302 -
+192.168.5.209 - - [12/Dec/2024 16:09:41] "GET /consultar?edit=false HTTP/1.1" 200 -
+192.168.5.209 - - [12/Dec/2024 16:09:46] "GET /consultar?edit=true HTTP/1.1" 200 -
+192.168.5.209 - - [12/Dec/2024 16:09:51] "POST /consultar?edit=true HTTP/1.1" 302 -
+192.168.5.209 - - [12/Dec/2024 16:09:51] "GET /consultar?edit=false HTTP/1.1" 200 -
+192.168.5.209 - - [12/Dec/2024 16:10:01] "POST /excluir/10 HTTP/1.1" 302 -
+192.168.5.209 - - [12/Dec/2024 16:10:01] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [12/Dec/2024 16:11:35] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [12/Dec/2024 16:11:41] "GET /logout HTTP/1.1" 302 -
+192.168.5.209 - - [12/Dec/2024 16:11:41] "GET / HTTP/1.1" 200 -
+192.168.5.209 - - [12/Dec/2024 16:11:41] "GET /static/img.png HTTP/1.1" 304 -
+ * Serving Flask app 'app2'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.5:5000
+Press CTRL+C to quit
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 09:33:03] "GET / HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 09:33:03] "GET /static/img.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 09:33:16] "POST / HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 09:33:16] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 09:40:58] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 09:41:41] "GET /cadastro HTTP/1.1" 200 -
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 10:01:35] "GET / HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:01:35] "GET /static/img.png HTTP/1.1" 304 -
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/helpers.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py', reloading
+192.168.5.209 - - [13/Dec/2024 10:01:41] "POST / HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2552, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/mantiqueira/SIDE/app2.py", line 56, in login
+    return redirect(url_for('cadastro'))
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'cadastro'. Did you mean 'static' instead?
+192.168.5.209 - - [13/Dec/2024 10:01:41] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:01:41] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:01:41] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:01:41] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 10:06:05] "POST / HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 10:06:05] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:06:15] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:06:17] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:06:37] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:06:38] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:06:40] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:06:52] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:06:56] "GET / HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:06:56] "GET /static/img.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:07:16] "POST / HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 10:07:16] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:07:18] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:07:18] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:07:19] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:07:29] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:07:33] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:08:09] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:10:15] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:10:35] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:10:37] "GET /logout HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 10:10:37] "GET / HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:10:37] "GET /static/img.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:14:03] "POST / HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 10:14:03] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:14:27] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:14:28] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:15:26] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:15:35] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:16:02] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:16:05] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:16:12] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:18:00] "GET /cadastro HTTP/1.1" 200 -
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py', reloading
+ * Detected change in '/usr/lib/python3/dist-packages/jinja2/environment.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py', reloading
+192.168.5.209 - - [13/Dec/2024 10:18:24] "GET /cadastro HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2552, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/mantiqueira/SIDE/app2.py", line 70, in cadastro
+    return render_template('cadastro.html')
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/mantiqueira/SIDE/templates/cadastro.html", line 59, in top-level template code
+    <a class="nav-link" href="{{ url_for('/') }}">
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint '/'. Did you mean 'static' instead?
+192.168.5.209 - - [13/Dec/2024 10:18:24] "GET /cadastro?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:18:24] "GET /cadastro?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:18:24] "GET /cadastro?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:18:24] "GET /cadastro?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 10:19:13] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:19:15] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:19:15] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:19:54] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:19:55] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:19:55] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:19:55] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:19:55] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:19:56] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:20:03] "GET /cadastro HTTP/1.1" 200 -
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 10:21:30] "GET /cadastro HTTP/1.1" 200 -
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 10:21:43] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:21:48] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:21:50] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:21:51] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:22:15] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:22:21] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:22:22] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:22:23] "GET /menu HTTP/1.1" 200 -
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py', reloading
+ * Detected change in '/usr/lib/python3/dist-packages/jinja2/environment.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py', reloading
+192.168.5.209 - - [13/Dec/2024 10:23:19] "GET /menu HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2552, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/mantiqueira/SIDE/app2.py", line 70, in menu
+    return render_template('cadastro.html')
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/mantiqueira/SIDE/templates/cadastro.html", line 59, in top-level template code
+    <a class="nav-link" href="{{ url_for('cadastro') }}">
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'cadastro'. Did you mean 'static' instead?
+192.168.5.209 - - [13/Dec/2024 10:23:19] "GET /menu?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:23:19] "GET /menu?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:23:19] "GET /menu?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:23:20] "GET /menu?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 10:23:56] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:23:57] "GET /cadastro HTTP/1.1" 200 -
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py', reloading
+ * Detected change in '/usr/lib/python3/dist-packages/jinja2/environment.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py', reloading
+192.168.5.209 - - [13/Dec/2024 10:24:46] "GET /cadastro HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2552, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/mantiqueira/SIDE/app2.py", line 24, in decorated_function
+    return f(*args, **kwargs)
+  File "/home/mantiqueira/SIDE/app2.py", line 141, in index
+    return render_template('index.html', current_datetime=current_datetime, username=g.username)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/mantiqueira/SIDE/templates/index.html", line 59, in top-level template code
+    <a class="nav-link" href="{{ url_for('cadastro') }}">
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'cadastro'. Did you mean 'static' instead?
+192.168.5.209 - - [13/Dec/2024 10:24:46] "GET /cadastro?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:24:46] "GET /cadastro?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:24:46] "GET /cadastro?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:24:46] "GET /cadastro?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py', reloading
+ * Detected change in '/usr/lib/python3/dist-packages/jinja2/environment.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py', reloading
+192.168.5.209 - - [13/Dec/2024 10:25:10] "GET /cadastro HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2552, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/mantiqueira/SIDE/app2.py", line 24, in decorated_function
+    return f(*args, **kwargs)
+  File "/home/mantiqueira/SIDE/app2.py", line 141, in index
+    return render_template('index.html', current_datetime=current_datetime, username=g.username)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/mantiqueira/SIDE/templates/index.html", line 59, in top-level template code
+    <a class="nav-link" href="{{ url_for('cadastro') }}">
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'cadastro'. Did you mean 'static' instead?
+192.168.5.209 - - [13/Dec/2024 10:25:10] "GET /cadastro?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:25:10] "GET /cadastro?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:25:10] "GET /cadastro?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:25:10] "GET /cadastro?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 10:25:43] "GET /consultar HTTP/1.1" 200 -
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py', reloading
+ * Detected change in '/usr/lib/python3/dist-packages/jinja2/environment.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py', reloading
+192.168.5.209 - - [13/Dec/2024 10:25:48] "GET /cadastro HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2552, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/mantiqueira/SIDE/app2.py", line 24, in decorated_function
+    return f(*args, **kwargs)
+  File "/home/mantiqueira/SIDE/app2.py", line 141, in index
+    return render_template('index.html', current_datetime=current_datetime, username=g.username)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/mantiqueira/SIDE/templates/index.html", line 59, in top-level template code
+    <a class="nav-link" href="{{ url_for('cadastro') }}">
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'cadastro'. Did you mean 'static' instead?
+192.168.5.209 - - [13/Dec/2024 10:25:48] "GET /cadastro?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:25:48] "GET /cadastro?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:25:48] "GET /cadastro?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 10:26:23] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:26:24] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:26:28] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:26:30] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:27:10] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:31:12] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:31:40] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:32:22] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:34:29] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:34:30] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:34:42] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:36:02] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:36:31] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:36:46] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:36:53] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:37:14] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:37:15] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:37:43] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:38:39] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:38:40] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:38:45] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:38:47] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:38:59] "GET /logout HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 10:38:59] "GET / HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:38:59] "GET /static/img.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:39:11] "POST / HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 10:39:11] "GET /menu HTTP/1.1" 200 -
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 10:39:53] "GET /logout HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 10:39:53] "GET / HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:39:53] "GET /static/img.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:40:00] "POST / HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 10:40:01] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:40:15] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:40:41] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:40:46] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:41:11] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:41:13] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:41:13] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:41:14] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:41:14] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:41:15] "GET /menu HTTP/1.1" 200 -
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 10:41:48] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:41:49] "GET /menu HTTP/1.1" 200 -
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 10:42:08] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:42:11] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:42:12] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:42:13] "GET /menu HTTP/1.1" 200 -
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py', reloading
+ * Detected change in '/usr/lib/python3/dist-packages/jinja2/environment.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py', reloading
+192.168.5.209 - - [13/Dec/2024 10:43:27] "GET /menu HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2552, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/mantiqueira/SIDE/app2.py", line 70, in menu
+    return render_template('index.html')
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/mantiqueira/SIDE/templates/index.html", line 73, in top-level template code
+    <a class="nav-link" href="{{ url_for('cadastro') }}">
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'cadastro'. Did you mean 'static' instead?
+192.168.5.209 - - [13/Dec/2024 10:43:27] "GET /menu?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:43:27] "GET /menu?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:43:27] "GET /menu?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:43:27] "GET /menu?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 10:45:18] "GET / HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:45:18] "GET /static/img.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:45:26] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 10:45:28] "GET /cadastro HTTP/1.1" 200 -
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py', reloading
+ * Detected change in '/usr/lib/python3/dist-packages/jinja2/environment.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py', reloading
+192.168.5.209 - - [13/Dec/2024 10:46:15] "GET /menu HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2552, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/mantiqueira/SIDE/app2.py", line 70, in menu
+    return render_template('index.html')
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/mantiqueira/SIDE/templates/index.html", line 73, in top-level template code
+    <a class="nav-link" href="{{ url_for('cadastro') }}">
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'cadastro'. Did you mean 'static' instead?
+192.168.5.209 - - [13/Dec/2024 10:46:15] "GET /menu?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:46:15] "GET /menu?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:46:15] "GET /menu?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/usr/lib/python3/dist-packages/jinja2/environment.py', reloading
+192.168.5.209 - - [13/Dec/2024 10:47:48] "GET /menu HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2552, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/mantiqueira/SIDE/app2.py", line 24, in decorated_function
+    return f(*args, **kwargs)
+  File "/home/mantiqueira/SIDE/app2.py", line 71, in menu
+    return render_template('index.html')
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/mantiqueira/SIDE/templates/index.html", line 73, in top-level template code
+    <a class="nav-link" href="{{ url_for('cadastro') }}">
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'cadastro'. Did you mean 'static' instead?
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py', reloading
+192.168.5.209 - - [13/Dec/2024 10:47:48] "GET /menu?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:47:48] "GET /menu?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:47:48] "GET /menu?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 10:47:48] "GET /menu?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py', reloading
+ * Detected change in '/usr/lib/python3/dist-packages/jinja2/environment.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py', reloading
+192.168.5.209 - - [13/Dec/2024 11:01:33] "GET /menu HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2552, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/mantiqueira/SIDE/app2.py", line 24, in decorated_function
+    return f(*args, **kwargs)
+  File "/home/mantiqueira/SIDE/app2.py", line 71, in menu
+    return render_template('index.html')
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/mantiqueira/SIDE/templates/index.html", line 73, in top-level template code
+    <a class="nav-link" href="{{ url_for('cadastro') }}">
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'cadastro'. Did you mean 'static' instead?
+192.168.5.209 - - [13/Dec/2024 11:01:33] "GET /menu?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:01:33] "GET /menu?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:01:33] "GET /menu?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:01:33] "GET /menu?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 11:01:36] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:01:36] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:01:37] "GET / HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:01:37] "GET /static/img.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:01:43] "POST / HTTP/1.1" 302 -
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py', reloading
+ * Detected change in '/usr/lib/python3/dist-packages/jinja2/environment.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py', reloading
+192.168.5.209 - - [13/Dec/2024 11:01:43] "GET /menu HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2552, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/mantiqueira/SIDE/app2.py", line 24, in decorated_function
+    return f(*args, **kwargs)
+  File "/home/mantiqueira/SIDE/app2.py", line 71, in menu
+    return render_template('index.html')
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/mantiqueira/SIDE/templates/index.html", line 73, in top-level template code
+    <a class="nav-link" href="{{ url_for('cadastro') }}">
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'cadastro'. Did you mean 'static' instead?
+192.168.5.209 - - [13/Dec/2024 11:01:43] "GET /menu?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:01:43] "GET /menu?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:01:43] "GET /menu?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 11:02:38] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:03:18] "GET /cadastro HTTP/1.1" 200 -
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py', reloading
+ * Detected change in '/usr/lib/python3/dist-packages/jinja2/environment.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py', reloading
+192.168.5.209 - - [13/Dec/2024 11:03:47] "GET /menu HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2552, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/mantiqueira/SIDE/app2.py", line 24, in decorated_function
+    return f(*args, **kwargs)
+  File "/home/mantiqueira/SIDE/app2.py", line 71, in menu
+    return render_template('index.html')
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/mantiqueira/SIDE/templates/index.html", line 73, in top-level template code
+    <a class="nav-link" href="{{ url_for('cadastro') }}">
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'cadastro'. Did you mean 'static' instead?
+192.168.5.209 - - [13/Dec/2024 11:03:47] "GET /menu?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:03:47] "GET /menu?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:03:47] "GET /menu?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 11:04:07] "GET /cadastro HTTP/1.1" 200 -
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py', reloading
+ * Detected change in '/usr/lib/python3/dist-packages/jinja2/environment.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py', reloading
+192.168.5.209 - - [13/Dec/2024 11:04:10] "GET /menu HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2552, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/mantiqueira/SIDE/app2.py", line 24, in decorated_function
+    return f(*args, **kwargs)
+  File "/home/mantiqueira/SIDE/app2.py", line 71, in menu
+    return render_template('index.html')
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/mantiqueira/SIDE/templates/index.html", line 73, in top-level template code
+    <a class="nav-link" href="{{ url_for('cadastro') }}">
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'cadastro'. Did you mean 'static' instead?
+192.168.5.209 - - [13/Dec/2024 11:04:10] "GET /menu?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:04:10] "GET /menu?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:04:10] "GET /menu?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 11:04:56] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:04:58] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:05:00] "GET /menu HTTP/1.1" 200 -
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py', reloading
+ * Detected change in '/usr/lib/python3/dist-packages/jinja2/environment.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py', reloading
+192.168.5.209 - - [13/Dec/2024 11:05:02] "GET /consultar HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2552, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/mantiqueira/SIDE/app2.py", line 24, in decorated_function
+    return f(*args, **kwargs)
+  File "/home/mantiqueira/SIDE/app2.py", line 205, in consultar
+    return render_template('consultar.html', records=records, editing=editing)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/mantiqueira/SIDE/templates/consultar.html", line 119, in top-level template code
+    <a href="{{ url_for('index') }}" class="btn btn-secondary">Voltar para o Cadastro</a>
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'login' instead?
+192.168.5.209 - - [13/Dec/2024 11:05:02] "GET /consultar?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:05:02] "GET /consultar?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:05:02] "GET /consultar?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:05:02] "GET /consultar?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py', reloading
+ * Detected change in '/usr/lib/python3/dist-packages/jinja2/environment.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py', reloading
+192.168.5.209 - - [13/Dec/2024 11:05:55] "GET /consultar HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2552, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/mantiqueira/SIDE/app2.py", line 24, in decorated_function
+    return f(*args, **kwargs)
+  File "/home/mantiqueira/SIDE/app2.py", line 203, in consultar
+    return render_template('consultar.html', records=records, editing=editing)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/mantiqueira/SIDE/templates/consultar.html", line 119, in top-level template code
+    <a href="{{ url_for('index') }}" class="btn btn-secondary">Voltar para o Cadastro</a>
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'login' instead?
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 11:05:58] "GET /consultar?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:05:58] "GET /consultar?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:05:58] "GET /consultar?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:05:58] "GET /consultar?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:06:01] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:06:02] "GET /menu HTTP/1.1" 200 -
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py', reloading
+ * Detected change in '/usr/lib/python3/dist-packages/jinja2/environment.py', reloading
+ * Detected change in '/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py', reloading
+192.168.5.209 - - [13/Dec/2024 11:06:03] "GET /consultar HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2552, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2532, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/mantiqueira/SIDE/app2.py", line 24, in decorated_function
+    return f(*args, **kwargs)
+  File "/home/mantiqueira/SIDE/app2.py", line 203, in consultar
+    return render_template('consultar.html', records=records, editing=editing)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/usr/lib/python3/dist-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/mantiqueira/SIDE/templates/consultar.html", line 119, in top-level template code
+    <a href="{{ url_for('index') }}" class="btn btn-secondary">Voltar para o Cadastro</a>
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2034, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/flask/app.py", line 2023, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/mantiqueira/.local/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'login' instead?
+192.168.5.209 - - [13/Dec/2024 11:06:03] "GET /consultar?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:06:03] "GET /consultar?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:06:03] "GET /consultar?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 304 -
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 11:06:31] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:07:41] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:07:43] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:07:45] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:07:46] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:07:47] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:08:15] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:08:25] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:08:56] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:08:58] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:08:59] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:09:07] "GET /consultar?edit=true HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:09:09] "GET /consultar?edit=true HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:09:10] "POST /consultar?edit=true HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 11:09:10] "GET /consultar?edit=false HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:09:16] "POST /excluir/16 HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 11:09:16] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:09:34] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:09:34] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:09:36] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:09:38] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:10:30] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:10:32] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:10:35] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:10:37] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:10:53] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:10:55] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:10:59] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:12:18] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:12:30] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:12:31] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:12:33] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:12:50] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:13:53] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:14:08] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:14:12] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:14:20] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:14:30] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:14:57] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:15:26] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:15:36] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:16:26] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:16:41] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:17:12] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:18:01] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:18:18] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:19:48] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:20:14] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:20:28] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:20:30] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:20:55] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:21:14] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:21:16] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:21:18] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:21:19] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:21:21] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:21:25] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:21:26] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:21:27] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:21:29] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:21:30] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:22:16] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:22:38] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:22:39] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:22:43] "GET /consultar?edit=true HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:22:45] "POST /consultar?edit=true HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 11:22:45] "GET /consultar?edit=false HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:23:47] "GET /consultar?edit=false HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:23:51] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:23:52] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:26:01] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:26:02] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:26:23] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:26:24] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:26:25] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:26:29] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:27:37] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:27:38] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:28:02] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:28:13] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:28:26] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:28:47] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:28:48] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:28:51] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:28:52] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:28:53] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:28:53] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:29:47] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:29:47] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:30:06] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:30:08] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:30:09] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:30:10] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:30:11] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:30:13] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:30:30] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:30:38] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:30:40] "GET /cadastro HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:30:41] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:30:43] "GET /menu HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:34:54] "GET /consultar HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:34:58] "GET /logout HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 11:34:58] "GET / HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:34:58] "GET /static/img.png HTTP/1.1" 304 -
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+16
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 11:40:16] "GET / HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 11:40:16] "GET /login HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:40:16] "GET /static/img.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:40:26] "POST / HTTP/1.1" 405 -
+192.168.5.209 - - [13/Dec/2024 11:40:46] "POST / HTTP/1.1" 405 -
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 11:41:18] "POST / HTTP/1.1" 405 -
+192.168.5.209 - - [13/Dec/2024 11:41:20] "POST / HTTP/1.1" 405 -
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 11:42:24] "POST / HTTP/1.1" 405 -
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 11:43:18] "POST / HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 11:43:18] "GET /login HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:43:18] "GET /static/img.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:43:33] "POST / HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 11:43:34] "GET /login HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:43:34] "GET /static/img.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:43:46] "GET /consultar HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 11:43:46] "GET /login HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:43:46] "GET /static/img.png HTTP/1.1" 304 -
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Detected change in '/home/mantiqueira/SIDE/app2.py', reloading
+ * Restarting with watchdog (inotify)
+ * Debugger is active!
+ * Debugger PIN: 921-828-906
+192.168.5.209 - - [13/Dec/2024 11:44:42] "GET /login HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:44:42] "GET /static/img.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:44:50] "POST / HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 11:44:50] "GET /login HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:44:50] "GET /static/img.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:44:57] "POST / HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 11:44:57] "GET /login HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:44:57] "GET /static/img.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:46:18] "POST / HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 11:46:18] "GET /login HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:46:18] "GET /static/img.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:50:30] "GET /login HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:50:30] "GET /static/img.png HTTP/1.1" 304 -
+192.168.5.209 - - [13/Dec/2024 11:50:42] "POST / HTTP/1.1" 302 -
+192.168.5.209 - - [13/Dec/2024 11:50:42] "GET /login HTTP/1.1" 200 -
+192.168.5.209 - - [13/Dec/2024 11:50:42] "GET /static/img.png HTTP/1.1" 304 -
