@@ -5,7 +5,7 @@ def remover_tracos(texto):
     return texto.replace("-", "/")  # Substitui traços por barras
 
 # Cabeçalho
-st.header("Geração de texto - VAGAS INTERNAS")
+st.header("Gerador de texto - VAGAS INTERNAS")
 st.write("")
 
 # Campos de entrada
