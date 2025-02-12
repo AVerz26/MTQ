@@ -18,7 +18,7 @@ with col2:
 with col3:
     campo_menu_1 = st.selectbox("Localização da Vaga:", ["ITANHANDU/MG", "PRIMAVERA DO LESTE/MT", "LORENA/SP", "FORMOSA/GO", "FRANCISCO BELTRÃO/PR", "CANELA/SC", "DESCALVADO/SP", "CAMPANHA/MG", "PASSA QUATRO/MG", "UBERLÂNDIA/MG", "CÉU AZUL/PR", "ÁGUA BOA/MT", "CONFRESA/MT", "RIZOMA", "FAZENDA DA TOCA"])
 
-coli1, coli2 = st.columns(2)
+coli1, coli2, coli3 = st.columns(3)
 
 with coli1:
     campo_menu_2 = st.text_input("Setor:")
