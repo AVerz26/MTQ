@@ -37,6 +37,7 @@ if st.button("Gerar Concatenação"):
     concatenacao = f"{campo_data} - {descricao} - {campo_menu_1} - {campo_menu_2} - {campo_menu_3}"
     
     # Exibir a concatenação
-    st.write("Resultado da concatenação:")
+    st.write("")
+    st.write("Resultado:")
     st.code(concatenacao)
 
