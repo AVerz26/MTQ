@@ -7,6 +7,7 @@ def remover_tracos(texto):
 st.header("Geração de texto - VAGAS INTERNAS")
 st.write("")
 
+
 # Campos de entrada
 col1, col2, col3 = st.columns(3)
 
@@ -28,7 +29,7 @@ with coli1:
     campo_menu_2 = remover_tracos(campo_menu_2)  # Remove traços do setor
 
 with coli2:
-    campo_menu_3 = st.text_input("Turno:")
+    campo_menu_3 = st.text_input("Turno e descrição adicionais:")
     campo_menu_3 = remover_tracos(campo_menu_3)  # Remove traços do turno
 
 # Botão para gerar a concatenação
