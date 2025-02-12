@@ -37,7 +37,7 @@ campo_menu_2 = remover_tracos(campo_menu_2)  # Remove traços do setor
 campo_menu_3 = remover_tracos(campo_menu_3)  # Remove traços do turno
 
 # Verificar se todos os campos estão preenchidos
-if st.button("Gerar Concatenação"):
+if st.button("Gerar Resultado"):
     if not campo_data or not descricao or not campo_menu_1 or not campo_menu_2 or not campo_menu_3:
         st.error("Por favor, preencha todos os campos obrigatórios!")
     else:
