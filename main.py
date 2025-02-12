@@ -2,7 +2,6 @@ import streamlit as st
 
 # Função para remover traços
 def remover_tracos(texto):
-    st.write("Traço (-) identificado, substituído por barra (/)")
     return texto.replace("-", "/")  # Remove todos os traços
 
 # Campos de entrada
