@@ -4,6 +4,9 @@ import streamlit as st
 def remover_tracos(texto):
     return texto.replace("-", "/")  # Substitui traços por barras
 
+st.header("Geração de texto - VAGAS INTERNAS")
+st.write("")
+
 # Campos de entrada
 col1, col2, col3 = st.columns(3)
 
