@@ -1,13 +1,8 @@
 import streamlit as st
-import pyperclip  # Para copiar para a área de transferência
 
 # Função para remover traços
 def remover_tracos(texto):
     return texto.replace("-", "/")  # Substitui traços por barras
-
-# Função para copiar para a área de transferência
-def copiar_para_area_de_transferencia(texto):
-    pyperclip.copy(texto)
 
 # Campos de entrada
 campo_data = st.date_input("Data de Abertura Vaga")
@@ -32,7 +27,3 @@ if st.button("Gerar Concatenação"):
     st.write("Resultado da concatenação:")
     st.code(concatenacao)
 
-    # Botão de copiar para a área de transferência
-    if st.button("Copiar para a Área de Transferência"):
-        copiar_para_area_de_transferencia(concatenacao)
-        st.success("Texto copiado com sucesso!")
