@@ -24,9 +24,18 @@ with col3:
 
 # Colunas para Setor e Turno
 coli1, coli2, coli3 = st.columns(3)
+setores = [
+    "ADM/SUPORTE", "AGRICULTURA", "ALMOXARIFADO", "ARMAZÉM", 
+    "CLASSIFICAÇÃO DE OVOS", "CONTROLE DE QUALIDADE", "DEPÓSITO DE EMBALAGEM", 
+    "EXPEDIÇÃO DE OVOS", "EXPEDIÇÃO DE RAÇÃO", "FÁBRICA DE RAÇÃO", 
+    "HIGIENIZAÇÃO OPERACIONAL", "HIGIENIZAÇÃO PRÉ-OPERACIONAL", 
+    "MANUTENÇÃO", "ORIGINAÇÃO", "PASTEURIZAÇÃO DE OVOS", 
+    "PÁ CARREGADEIRA", "PCP", "POSTURA", "RECEBIMENTO", "RECRIA", 
+    "SERVIÇOS GERAIS", "SSMA", "TRANSPORTE ESTERCO", "TRATOR", "USINA DE COMPOSTAGEM"
+]
 
 with coli1:
-    campo_menu_2 = st.text_input("Setor:")
+    campo_menu_2 = st.selectbox("Setor:", setores)
 
 with coli2:
     campo_menu_3 = st.text_input("Turno e descrição adicionais:")
