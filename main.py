@@ -4,6 +4,7 @@ st.title("Gerador de Concatenação de Dados")
 
 # Campos de entrada
 campo_data = st.date_input("Selecione uma data")
+campo_data = campo_data.strftime("%d/%m/%Y")
 campo_digitavel = st.text_input("Digite algo", "")
 
 # Menus suspensos (selectbox)
