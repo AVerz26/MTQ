@@ -12,7 +12,7 @@ st.write("")
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    campo_data = st.date_input("Data de Abertura Vaga")
+    campo_data = st.date_input("Data de Abertura da Vaga")
     campo_data = campo_data.strftime("%d/%m/%Y")
 
 with col2:
@@ -38,7 +38,7 @@ with coli1:
     campo_menu_2 = st.selectbox("Setor:", setores)
 
 with coli2:
-    campo_menu_3 = st.text_input("Turno e descrição adicionais:")
+    campo_menu_3 = st.text_input("Turno e descrição adicional:")
 
 # Remover traços
 descricao = remover_tracos(descricao)  # Remove traços da descrição
