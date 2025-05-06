@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_gsheets import GSheetsConnection
 
 st.set_page_config("MTQ VAGAS", layout = "wide")
 # Função para remover traços
@@ -61,3 +62,24 @@ if st.button("Gerar Resultado"):
         st.write("Resultado:")
         st.code(concatenacao)
         st.warning("Manter a formatação correta desse texto para o Forms, pois se usar o '-' desconfigurará o dashboard!")
+
+    df = pd.DataFrame([
+        {
+            "Data":campo_data,
+            "Descrição Vaga":descricao,
+            "Localização da Vaga": campo_menu_1,
+            "Setor": campo_menu_2,
+            "Descrição Adicional": campo_menu_3,
+            "Responsável": resp
+        }
+    ])
+        
+
+    try:
+        conn = st.connection("gsheets", type=GSheetsConnection)
+        existing_data = conn.read(worksheet="principal", usecols=[0, 1, 2, 3],  ttl=3)
+        existing_data = existing_data.dropna(how="all")
+        update_df = pd.concat([existing_data, df], ignore_index=True)              
+        conn.update(worksheet="principal", data=update_df)  # Substitua por 'A1' para que os dados sejam atualizados na primeira linha
+    except:
+        st.write("o")
