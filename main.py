@@ -91,4 +91,4 @@ if st.button("Gerar Resultado"):
     except Exception as e:
  
         st.error(f"Ocorreu um erro: {e}")
-        st.text(traceback.format_exc())
+        #st.text(traceback.format_exc())
