@@ -79,16 +79,16 @@ if st.button("Gerar Resultado"):
 
     try:
         conn = st.connection("gsheets", type=GSheetsConnection)
-        st.write("ok")
+        st.write("")
         existing_data = conn.read(worksheet="principal", usecols=[0, 1, 2, 3, 4, 5],  ttl=10)
-        st.write("ok")
+        st.write("")
         existing_data = existing_data.dropna(how="all")
-        st.write("ok")
+        st.write("")
         update_df = pd.concat([existing_data, df], ignore_index=True)      
-        st.write("ok")
+        st.write("")
         conn.update(worksheet="principal", data=update_df)  
-        st.write("ok")
+        st.write("")
     except Exception as e:
-        conn.update(worksheet="principal", data=df)  
+ 
         st.error(f"Ocorreu um erro: {e}")
         st.text(traceback.format_exc())
