@@ -80,8 +80,12 @@ if st.button("Gerar Resultado"):
         conn = st.connection("gsheets", type=GSheetsConnection)
         st.write("ok")
         existing_data = conn.read(worksheet="principal", usecols=[0, 1, 2, 3, 4, 5],  ttl=10)
+        st.write("ok")
         existing_data = existing_data.dropna(how="all")
-        update_df = pd.concat([existing_data, df], ignore_index=True)              
-        conn.update(worksheet="principal", data=update_df)  # Substitua por 'A1' para que os dados sejam atualizados na primeira linha
+        st.write("ok")
+        update_df = pd.concat([existing_data, df], ignore_index=True)      
+        st.write("ok")
+        conn.update(worksheet="principal", data=update_df)  
+        st.write("ok")
     except:
         st.write("o")
