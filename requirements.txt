@@ -1,1 +1,3 @@
 pyperclip
+pandas
+st-gsheets-connection
