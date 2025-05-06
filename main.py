@@ -2,7 +2,7 @@ import streamlit as st
 
 # Função para remover traços
 def remover_tracos(texto):
-    return texto.replace("-", "/")  # Substitui traços por barras
+    return texto.replace("-", ":")  # Substitui traços por barras
 
 # Cabeçalho
 st.header("Gerador de texto - VAGAS INTERNAS")
