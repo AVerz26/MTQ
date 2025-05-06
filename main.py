@@ -39,6 +39,8 @@ with coli1:
 
 with coli2:
     campo_menu_3 = st.text_input("Turno e descrição adicional:")
+with coli3:
+    resp = st.text_input("Responsável pela abertura da vaga:")
 
 # Remover traços
 descricao = remover_tracos(descricao)  # Remove traços da descrição
