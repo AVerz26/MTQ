@@ -78,7 +78,8 @@ if st.button("Gerar Resultado"):
 
     try:
         conn = st.connection("gsheets", type=GSheetsConnection)
-        existing_data = conn.read(worksheet="principal", usecols=[0, 1, 2, 3],  ttl=3)
+        st.write("ok")
+        existing_data = conn.read(worksheet="principal", usecols=[0, 1, 2, 3, 4, 5],  ttl=10)
         existing_data = existing_data.dropna(how="all")
         update_df = pd.concat([existing_data, df], ignore_index=True)              
         conn.update(worksheet="principal", data=update_df)  # Substitua por 'A1' para que os dados sejam atualizados na primeira linha
