@@ -78,9 +78,9 @@ if st.button("Gerar Resultado"):
         
 
     try:
-        conn = st.connection("gsheets", type=GSheetsConnection)
+        conn = st.connection("VAGAS", type=GSheetsConnection)
         st.write("")
-        existing_data = conn.read(worksheet="principal", usecols=[0, 1, 2, 3, 4, 5],  ttl=10)
+        existing_data = conn.read(worksheet="principal",  ttl=10)
         st.write("")
         existing_data = existing_data.dropna(how="all")
         st.write("")
