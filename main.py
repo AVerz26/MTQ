@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_gsheets import GSheetsConnection
 import pandas as pd
+import traceback
 
 st.set_page_config("MTQ VAGAS", layout = "wide")
 # Função para remover traços
@@ -87,5 +88,6 @@ if st.button("Gerar Resultado"):
         st.write("ok")
         conn.update(worksheet="principal", data=update_df)  
         st.write("ok")
-    except:
-        st.write("o")
+    except Exception as e:
+        st.error(f"Ocorreu um erro: {e}")
+        st.text(traceback.format_exc())
