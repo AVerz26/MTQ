@@ -57,3 +57,4 @@ if st.button("Gerar Resultado"):
         st.write("")
         st.write("Resultado:")
         st.code(concatenacao)
+        st.warning("Manter a formatação correta desse texto para o Forms, pois se usar o "-" desconfigurará o dashboard!")
