@@ -1,5 +1,6 @@
 import streamlit as st
 
+st.set_page_config("MTQ VAGAS", layout = "wide")
 # Função para remover traços
 def remover_tracos(texto):
     return texto.replace("-", ":")  # Substitui traços por barras
