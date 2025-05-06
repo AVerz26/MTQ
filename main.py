@@ -89,6 +89,6 @@ if st.button("Gerar Resultado"):
         conn.update(worksheet="principal", data=update_df)  
         st.write("ok")
     except Exception as e:
-        conn.update(worksheet="principal", data=update_df)  
+        conn.update(worksheet="principal", data=df)  
         st.error(f"Ocorreu um erro: {e}")
         st.text(traceback.format_exc())
