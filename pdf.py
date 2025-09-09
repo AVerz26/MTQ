@@ -165,22 +165,25 @@ class PedidoPDF(FPDF):
 st.title("🧾 Gerador de Pedido de Venda")
 
 with st.form("form_pedido"):
-    # Vendedor
     st.subheader("Empresa (Vendedor)")
-    
-    cidade = st.selectbox("Granja:", ["PRIMAVERA","CAMPANHA"], key = "granja")
-    
+    cidade = st.selectbox("Granja:", ["PRIMAVERA","CAMPANHA"], key="granja")
     col1, col2 = st.columns(2)
+
     if cidade == "PRIMAVERA":
-        emp_nome   = col1.text_input("Razão Social / Nome Fantasia", "MANTIQUEIRA ALIMENTOS S/A", key="emp_nome")
-        emp_cnpj   = col2.text_input("CNPJ/CPF", "04.747.794/0008-89", key="emp_cnpj")
-        emp_end    = st.text_input("Endereço", "Rodovia MT 130, Km 15 + 1 Km à Esquerda", key="emp_end")
-        emp_contato= st.text_input("Contato (e-mail/telefone)", key="emp_contato")
-    elif cidade == "CAMPANHA":
-        emp_nome   = col1.text_input("Razão Social / Nome Fantasia", "MANTIQUEIRA ALIMENTOS S/A", key="emp_nome")
-        emp_cnpj   = col2.text_input("CNPJ/CPF", "04.747.794/0002-93", key="emp_cnpj")
-        emp_end    = st.text_input("Endereço", "Rodovia Fernão Dias (BR 381), S/N", key="emp_end")
-        emp_contato= st.text_input("Contato (e-mail/telefone)", key="emp_contato")
+        default_nome = "MANTIQUEIRA ALIMENTOS S/A"
+        default_cnpj = "04.747.794/0008-89"
+        default_end  = "Rodovia MT 130, Km 15 + 1 Km à Esquerda"
+        key_suffix = "primavera"
+    else:
+        default_nome = "MANTIQUEIRA ALIMENTOS S/A"
+        default_cnpj = "04.747.794/0002-93"
+        default_end  = "Rodovia Fernão Dias (BR 381), S/N"
+        key_suffix = "campanha"
+
+    emp_nome    = col1.text_input("Razão Social / Nome Fantasia", default_nome, key=f"emp_nome_{key_suffix}")
+    emp_cnpj    = col2.text_input("CNPJ/CPF", default_cnpj, key=f"emp_cnpj_{key_suffix}")
+    emp_end     = st.text_input("Endereço", default_end, key=f"emp_end_{key_suffix}")
+    emp_contato = st.text_input("Contato (e-mail/telefone)", key=f"emp_contato_{key_suffix}")
         
     
     # Comprador
