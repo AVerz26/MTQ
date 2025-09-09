@@ -176,7 +176,7 @@ with st.form("form_pedido"):
         emp_cnpj   = col2.text_input("CNPJ/CPF", "04.747.794/0008-89", key="emp_cnpj")
         emp_end    = st.text_input("Endereço", "Rodovia MT 130, Km 15 + 1 Km à Esquerda", key="emp_end")
         emp_contato= st.text_input("Contato (e-mail/telefone)", key="emp_contato")
-    else:
+    elif cidade == "CAMPANHA":
         emp_nome   = col1.text_input("Razão Social / Nome Fantasia", "MANTIQUEIRA ALIMENTOS S/A", key="emp_nome")
         emp_cnpj   = col2.text_input("CNPJ/CPF", "04.747.794/0002-93", key="emp_cnpj")
         emp_end    = st.text_input("Endereço", "Rodovia Fernão Dias (BR 381), S/N", key="emp_end")
