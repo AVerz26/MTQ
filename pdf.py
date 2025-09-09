@@ -168,11 +168,18 @@ with st.form("form_pedido"):
     # Vendedor
     st.subheader("Empresa (Vendedor)")
     col1, col2 = st.columns(2)
+    cidade = st.selectbox("Granja:", ["PRIMAVERA","CAMPANHA"])
 
-    emp_nome   = col1.text_input("Razão Social / Nome Fantasia", "MANTIQUEIRA ALIMENTOS S/A", key="emp_nome")
-    emp_cnpj   = col2.text_input("CNPJ/CPF", "04.747.794/0008-89", key="emp_cnpj")
-    emp_end    = st.text_input("Endereço", "Rodovia MT 130, Km 15 + 1 Km à Esquerda", key="emp_end")
-    emp_contato= st.text_input("Contato (e-mail/telefone)", key="emp_contato")
+    if cidade == "PRIMAVERA":
+        emp_nome   = col1.text_input("Razão Social / Nome Fantasia", "MANTIQUEIRA ALIMENTOS S/A", key="emp_nome")
+        emp_cnpj   = col2.text_input("CNPJ/CPF", "04.747.794/0008-89", key="emp_cnpj")
+        emp_end    = st.text_input("Endereço", "Rodovia MT 130, Km 15 + 1 Km à Esquerda", key="emp_end")
+        emp_contato= st.text_input("Contato (e-mail/telefone)", key="emp_contato")
+    else:
+        emp_nome   = col1.text_input("Razão Social / Nome Fantasia", "MANTIQUEIRA ALIMENTOS S/A", key="emp_nome")
+        emp_cnpj   = col2.text_input("CNPJ/CPF", "04.747.794/0002-93", key="emp_cnpj")
+        emp_end    = st.text_input("Endereço", "Rodovia Fernão Dias (BR 381), S/N", key="emp_end")
+        emp_contato= st.text_input("Contato (e-mail/telefone)", key="emp_contato")
 
     # Comprador
     st.subheader("Cliente (Comprador)")
@@ -180,6 +187,7 @@ with st.form("form_pedido"):
     cli_nome   = col1.text_input("Nome/Razão Social" , key="cli_nome")
     cli_doc    = col2.text_input("CNPJ/CPF", key="cli_doc")
     cli_end    = st.text_input("Endereço", key="cli_end")
+    ins_est    = st.text_input("Inscrição Estadual", key="emp_end")
     cli_contato= st.text_input("Contato (e-mail/telefone)", key="cli_contato")
 
     # Condições
@@ -190,6 +198,7 @@ with st.form("form_pedido"):
     pagamento = pagamento.strftime("%d/%m/%Y")
     entrega    = col3.date_input("Data de entrega:", key="entrega", format="DD/MM/YYYY")
     entrega = entrega.strftime("%d/%m/%Y")
+    frete      = col4.selectbox("Tipo Frete:", ["CIF", "FOB"], key="frete")
     obs        = st.text_area("Dados Bancários:", "\n Itaú Unibanco S.A (Cód.: 341) \n Agência: 3032 \n C. Corrente: 37004-5", key="obs")
 
     # Itens
@@ -219,13 +228,14 @@ if enviado:
 
     pdf.tabela_comprador_vendedor(
         vendedor={"Empresa": emp_nome, "CNPJ/CPF": emp_cnpj, "Endereço": emp_end, "Contato": emp_contato},
-        comprador={"Nome/Razão Social": cli_nome, "CNPJ/CPF": cli_doc, "Endereço": cli_end, "Contato": cli_contato}
+        comprador={"Nome/Razão Social": cli_nome, "CNPJ/CPF": cli_doc, "Endereço": cli_end, "Inscrição": ins_est, "Contato": cli_contato}
     )
 
     pdf.tabela_condicoes({
         "Produto Safra": produto,
         "Data de pagamento": pagamento,
         "Data de entrega": entrega,
+        "Frete": frete,
         "Observações": obs
     })
 
