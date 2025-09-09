@@ -251,7 +251,7 @@ if enviado:
     pdf.assinaturas()
 
     # Gerar PDF só em memória
-    pdf_bytes = bytes(pdf.output(dest="S")).encode('latin1')
+    pdf_bytes = pdf.output(dest="S").encode('latin1')
 
     # Preview no Streamlit
     st.pdf(pdf_bytes, height=500, key="preview_pdf")
