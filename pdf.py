@@ -39,7 +39,8 @@ class PedidoPDF(FPDF):
     def cabecalho(self, pedido_id, emitido_em):
         try:
             self.image("logo_solobom.png", x=10, y=13, w=25)
-        except: pass
+        except:
+            pass
         self.set_font("Helvetica", "B", 14)
         self.cell(0, 8, "PEDIDO DE VENDA", ln=1, align="C")
         self.set_font("Helvetica", "", 10)
@@ -52,6 +53,7 @@ class PedidoPDF(FPDF):
         self.set_draw_color(200, 200, 200)
         self.line(10, self.get_y(), 200, self.get_y())
         self.ln(2)
+
         self.set_font("Helvetica", "", 10)
         page_width = self.w - 2 * self.l_margin
         col_width = (page_width - 10) / 2
@@ -59,8 +61,10 @@ class PedidoPDF(FPDF):
         v_items = list(vendedor.items())
         c_items = list(comprador.items())
         max_len = max(len(v_items), len(c_items))
-        while len(v_items) < max_len: v_items.append(("", ""))
-        while len(c_items) < max_len: c_items.append(("", ""))
+        while len(v_items) < max_len:
+            v_items.append(("", ""))
+        while len(c_items) < max_len:
+            c_items.append(("", ""))
 
         line_height = 6
         for (vk, vv), (ck, cv) in zip(v_items, c_items):
@@ -86,12 +90,13 @@ class PedidoPDF(FPDF):
 
         page_width = self.w - 2 * self.l_margin
         col_width = (page_width - 10) / 2
-
         left_items = list(esquerda.items())
         right_items = list(direita.items())
         max_len = max(len(left_items), len(right_items))
-        while len(left_items) < max_len: left_items.append(("", ""))
-        while len(right_items) < max_len: right_items.append(("", ""))
+        while len(left_items) < max_len:
+            left_items.append(("", ""))
+        while len(right_items) < max_len:
+            right_items.append(("", ""))
 
         line_height = 6
         for (lk, lv), (rk, rv) in zip(left_items, right_items):
@@ -121,8 +126,8 @@ class PedidoPDF(FPDF):
             self.cell(sum(widths), 8, "Nenhum item informado.", border=1, ln=1, align="C")
             return
         for i, row in enumerate(df.itertuples(), 1):
-            qtd = float(getattr(row, "Qtd(Kg)", 0) or 0)
-            vu = float(getattr(row, "Valor_Unitario", 0) or 0)
+            qtd = float(getattr(row, "Qtd_Kg", 0) or 0)
+            vu  = float(getattr(row, "Valor_Unitario", 0) or 0)
             sub = qtd * vu
             self.cell(widths[0], 7, str(i), border=1, align="C")
             self.cell(widths[1], 7, str(getattr(row, "Descrição", ""))[:50], border=1)
@@ -152,47 +157,52 @@ class PedidoPDF(FPDF):
 st.title("🧾 Gerador de Pedido de Venda")
 
 with st.form("form_pedido"):
-    # --- Vendedor ---
+    # Vendedor
     st.subheader("Empresa (Vendedor)")
     cidade = st.selectbox("Granja:", ["PRIMAVERA","CAMPANHA"], key="granja")
     col1, col2 = st.columns(2)
+
     if cidade == "PRIMAVERA":
         default_nome = "MANTIQUEIRA ALIMENTOS S/A"
         default_cnpj = "04.747.794/0008-89"
         default_end  = "Rodovia MT 130, Km 15 + 1 Km à Esquerda"
+        key_suffix = "primavera"
     else:
         default_nome = "MANTIQUEIRA ALIMENTOS S/A"
         default_cnpj = "04.747.794/0002-93"
         default_end  = "Rodovia Fernão Dias (BR 381), S/N"
+        key_suffix = "campanha"
 
-    emp_nome    = col1.text_input("Razão Social / Nome Fantasia", default_nome)
-    emp_cnpj    = col2.text_input("CNPJ/CPF", default_cnpj)
-    emp_end     = st.text_input("Endereço", default_end)
-    emp_contato = st.text_input("Contato (e-mail/telefone)")
+    emp_nome    = col1.text_input("Razão Social / Nome Fantasia", default_nome, key=f"emp_nome_{key_suffix}")
+    emp_cnpj    = col2.text_input("CNPJ/CPF", default_cnpj, key=f"emp_cnpj_{key_suffix}")
+    emp_end     = st.text_input("Endereço", default_end, key=f"emp_end_{key_suffix}")
+    emp_contato = st.text_input("Contato (e-mail/telefone)", key=f"emp_contato_{key_suffix}")
 
-    # --- Comprador ---
+    # Comprador
     st.subheader("Cliente (Comprador)")
     col1, col2 = st.columns(2)
-    cli_nome    = col1.text_input("Nome/Razão Social")
-    cli_doc     = col2.text_input("CNPJ/CPF")
-    cli_end     = st.text_input("Endereço")
-    ins_est     = st.text_input("Inscrição Estadual")
-    cli_contato = st.text_input("Contato (e-mail/telefone)")
+    cli_nome    = col1.text_input("Nome/Razão Social", key="cli_nome")
+    cli_doc     = col2.text_input("CNPJ/CPF", key="cli_doc")
+    cli_end     = st.text_input("Endereço", key="cli_end")
+    ins_est     = st.text_input("Inscrição Estadual", key="ins_est")
+    cli_contato = st.text_input("Contato (e-mail/telefone)", key="cli_contato")
 
-    # --- Condições ---
+    # Condições
     st.subheader("Detalhes Entrega/Pagamento")
     col1, col2, col3, col4 = st.columns(4)
-    produto   = col1.selectbox("Produto Safra:", ["Milho", "Soja"])
-    pagamento = col2.date_input("Data de pagamento:").strftime("%d/%m/%Y")
-    entrega   = col3.date_input("Data de entrega:").strftime("%d/%m/%Y")
-    frete     = col4.selectbox("Tipo Frete:", ["CIF", "FOB"])
-    obs       = st.text_area("Observações Entrega/Pagamento")
-    dados_banc= st.text_area("Dados Bancários:", "\n Itaú Unibanco S.A (Cód.: 341) \n Agência: 3032 \n C. Corrente: 37004-5")
+    produto   = col1.selectbox("Produto Safra:", ["Milho", "Soja"], key="produto")
+    pagamento = col2.date_input("Data de pagamento:", key="pagamento")
+    pagamento = pagamento.strftime("%d/%m/%Y")
+    entrega   = col3.date_input("Data de entrega:", key="entrega")
+    entrega   = entrega.strftime("%d/%m/%Y")
+    frete     = col4.selectbox("Tipo Frete:", ["CIF", "FOB"], key="frete")
+    obs       = st.text_area("Observações Entrega/Pagamento", key="obs")
+    dados_banc = st.text_area("Dados Bancários:", "\n Itaú Unibanco S.A (Cód.: 341) \n Agência: 3032 \n C. Corrente: 37004-5", key="banc")
 
-    # --- Itens ---
+    # Itens
     st.subheader("Itens do Pedido")
     df_itens = st.data_editor(
-        pd.DataFrame([{"Descrição": "Esterco", "Qtd(Kg)": 1, "Valor_Unitario": 100.00}]),
+        pd.DataFrame([{"Descrição": "Produto A", "Qtd_Kg": 1, "Valor_Unitario": 100.00}]),
         num_rows="dynamic",
         use_container_width=True,
         column_config={
@@ -201,12 +211,13 @@ with st.form("form_pedido"):
                 options=["Esterco", "Mistura Condensada"],
                 required=True
             ),
-            "Qtd(Kg)": st.column_config.NumberColumn("Qtd(Kg)", min_value=0.0, step=0.01, format="%.2f"),
+            "Qtd_Kg": st.column_config.NumberColumn("Qtd(Kg)", min_value=0.0, step=0.01, format="%.2f"),
             "Valor_Unitario": st.column_config.NumberColumn("Valor_Unitario", min_value=0.0, step=0.01, format="%.2f"),
         },
         key="grid_itens"
     )
 
+    # Submit
     enviado = st.form_submit_button("Gerar PDF")
 
 if enviado:
@@ -214,6 +225,7 @@ if enviado:
     pedido_id = numero_pedido()
     emitido_em = datetime.now().strftime("%d/%m/%Y")
 
+    # Gerar PDF
     pdf = PedidoPDF()
     pdf.cabecalho(pedido_id, emitido_em)
     pdf.tabela_comprador_vendedor(
@@ -235,10 +247,11 @@ if enviado:
 
     pdf_bytes = pdf.output(dest="S").encode('latin1')
 
-    st.pdf(pdf_bytes, height=500)
+    st.pdf(pdf_bytes, height=500, key="preview_pdf")
     st.download_button(
         "⬇️ Baixar PDF do Pedido",
         data=pdf_bytes,
         file_name=f"pedido_{pedido_id}.pdf",
-        mime="application/pdf"
+        mime="application/pdf",
+        key="download_pdf"
     )
