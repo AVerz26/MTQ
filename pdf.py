@@ -187,7 +187,7 @@ with st.form("form_pedido"):
     cli_nome   = col1.text_input("Nome/Razão Social" , key="cli_nome")
     cli_doc    = col2.text_input("CNPJ/CPF", key="cli_doc")
     cli_end    = st.text_input("Endereço", key="cli_end")
-    ins_est    = st.text_input("Inscrição Estadual", key="emp_end")
+    ins_est    = st.text_input("Inscrição Estadual", key="ins_end")
     cli_contato= st.text_input("Contato (e-mail/telefone)", key="cli_contato")
 
     # Condições
