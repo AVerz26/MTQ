@@ -192,7 +192,7 @@ with st.form("form_pedido"):
 
     # Condições
     st.subheader("Detalhes Entrega/Pagamento")
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
     produto    = col1.selectbox("Produto Safra:", ["Milho", "Soja"], key="produto")
     pagamento  = col2.date_input("Data de pagamento:", key="pagamento", format="DD/MM/YYYY")
     pagamento = pagamento.strftime("%d/%m/%Y")
