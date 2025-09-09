@@ -169,7 +169,8 @@ with st.form("form_pedido"):
     st.subheader("Empresa (Vendedor)")
     
     cidade = st.selectbox("Granja:", ["PRIMAVERA","CAMPANHA"], key = "granja")
-
+    
+    col1, col2 = st.columns(2)
     if cidade == "PRIMAVERA":
         emp_nome   = col1.text_input("Razão Social / Nome Fantasia", "MANTIQUEIRA ALIMENTOS S/A", key="emp_nome")
         emp_cnpj   = col2.text_input("CNPJ/CPF", "04.747.794/0008-89", key="emp_cnpj")
@@ -181,7 +182,7 @@ with st.form("form_pedido"):
         emp_end    = st.text_input("Endereço", "Rodovia Fernão Dias (BR 381), S/N", key="emp_end")
         emp_contato= st.text_input("Contato (e-mail/telefone)", key="emp_contato")
         
-    col1, col2 = st.columns(2)
+    
     # Comprador
     st.subheader("Cliente (Comprador)")
     col1, col2 = st.columns(2)
