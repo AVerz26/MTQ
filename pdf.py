@@ -204,7 +204,7 @@ with st.form("form_pedido"):
     entrega    = col3.date_input("Data de entrega:", key="entrega", format="DD/MM/YYYY")
     entrega = entrega.strftime("%d/%m/%Y")
     frete      = col4.selectbox("Tipo Frete:", ["CIF", "FOB"], key="frete")
-    obs        = st.text_area("", key="obs")
+    obs        = st.text_area("Obervações Entrega/Pagamento", key="obs")
     dados_banc = st.text_area("Dados Bancários:", "\n Itaú Unibanco S.A (Cód.: 341) \n Agência: 3032 \n C. Corrente: 37004-5", key="banc")
 
     # Itens
