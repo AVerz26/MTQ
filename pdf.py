@@ -131,8 +131,8 @@ class PedidoPDF(FPDF):
             self.cell(sum(widths), 8, "Nenhum item informado.", border=1, ln=1, align="C")
             return
         for i, row in enumerate(df.itertuples(), 1):
-            qtd = float_pt(getattr(row, "Qtd(Kg)", 0))
-            vu  = float_pt(getattr(row, "Valor_Unitario", 0))
+            qtd = float(getattr(row, "Qtd(Kg)", 0) or 0)
+            vu  = float(getattr(row, "Valor_Unitario", 0) or 0)
             sub = qtd * vu
             self.cell(widths[0], 7, str(i), border=1, align="C")
             self.cell(widths[1], 7, str(getattr(row, "Descrição", ""))[:50], border=1)
@@ -216,7 +216,7 @@ with st.form("form_pedido"):
         column_config={
             "Descrição": st.column_config.SelectboxColumn(
                 "Descrição",
-                options=["Esterco", "Mistura Condensada"],  # opções de seleção
+                options=["Esterco", "Mistura Condensada"],  
                 required=True
             ),
             "Qtd(Kg)": st.column_config.NumberColumn("Qtd(Kg)", min_value=0.0, step=0.01, format="%.2f"),
