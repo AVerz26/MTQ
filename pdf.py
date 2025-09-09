@@ -214,7 +214,11 @@ with st.form("form_pedido"):
         num_rows="dynamic",
         use_container_width=True,
         column_config={
-            "Descrição": st.column_config.TextColumn("Descrição", required=True),
+            "Descrição": st.column_config.SelectboxColumn(
+                "Descrição",
+                options=["Esterco", "Mistura Condensada"],  # opções de seleção
+                required=True
+            ),
             "Qtd(Kg)": st.column_config.NumberColumn("Qtd(Kg)", min_value=0.0, step=0.01, format="%.2f"),
             "Valor_Unitario": st.column_config.NumberColumn("Valor_Unitario", min_value=0.0, step=0.01, format="%.2f"),
         },
