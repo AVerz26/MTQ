@@ -167,8 +167,8 @@ st.title("🧾 Gerador de Pedido de Venda")
 with st.form("form_pedido"):
     # Vendedor
     st.subheader("Empresa (Vendedor)")
-    col1, col2 = st.columns(2)
-    cidade = st.selectbox("Granja:", ["PRIMAVERA","CAMPANHA"])
+    
+    cidade = st.selectbox("Granja:", ["PRIMAVERA","CAMPANHA"], key = "granja")
 
     if cidade == "PRIMAVERA":
         emp_nome   = col1.text_input("Razão Social / Nome Fantasia", "MANTIQUEIRA ALIMENTOS S/A", key="emp_nome")
@@ -180,7 +180,8 @@ with st.form("form_pedido"):
         emp_cnpj   = col2.text_input("CNPJ/CPF", "04.747.794/0002-93", key="emp_cnpj")
         emp_end    = st.text_input("Endereço", "Rodovia Fernão Dias (BR 381), S/N", key="emp_end")
         emp_contato= st.text_input("Contato (e-mail/telefone)", key="emp_contato")
-
+        
+    col1, col2 = st.columns(2)
     # Comprador
     st.subheader("Cliente (Comprador)")
     col1, col2 = st.columns(2)
