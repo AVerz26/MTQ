@@ -24,9 +24,9 @@ def tot_geral(df):
     if df.empty:
         return 0.0
     x = df.copy()
-    x["Qtd(Kg)"] = x["Qtd(Kg)"].apply(float_pt)
+    x["Qtd(ton.)"] = x["Qtd(ton.)"].apply(float_pt)
     x["Valor_Unitario"] = x["Valor_Unitario"].apply(float_pt)
-    x["Subtotal"] = x["Qtd(Kg)"] * x["Valor_Unitario"]
+    x["Subtotal"] = x["Qtd(ton.)"] * x["Valor_Unitario"]
     return float(x["Subtotal"].sum())
 
 # ---------- PDF ----------
