@@ -128,7 +128,7 @@ class PedidoPDF(FPDF):
 
     def tabela_itens(self, df):
         self.set_font("Arial", "B", 9)
-        colunas = ["Item", "Descrição", "Qtd(Kg)", "Valor_Unitario", "Subtotal"]
+        colunas = ["Item", "Descrição", "Qtd(ton.)", "Valor_Unitario", "Subtotal"]
         widths = [10, 80, 20, 30, 30]
     
         for i, col in enumerate(colunas):
@@ -213,12 +213,12 @@ with st.form("form_pedido"):
     # Itens
     st.subheader("Itens do Pedido")
     df_itens = st.data_editor(
-        pd.DataFrame([{"Descrição": "Produto A", "Qtd(Kg)": 1, "Valor_Unitario": 100.00}]),
+        pd.DataFrame([{"Descrição": "Produto A", "Qtd(ton.)": 1, "Valor_Unitario": 100.00}]),
         num_rows="dynamic",
         use_container_width=True,
         column_config={
             "Descrição": st.column_config.TextColumn("Descrição", required=True),
-            "Qtd(Kg)": st.column_config.NumberColumn("Qtd(Kg)", min_value=0.0, step=0.01, format="%.2f"),
+            "Qtd(ton.)": st.column_config.NumberColumn("Qtd(ton.)", min_value=0.0, step=0.01, format="%.2f"),
             "Valor_Unitario": st.column_config.NumberColumn("Valor_Unitario", min_value=0.0, step=0.01, format="%.2f"),
         },
         key="grid_itens"
