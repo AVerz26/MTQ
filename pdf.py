@@ -37,10 +37,11 @@ class PedidoPDF(FPDF):
         self.add_page()
 
     def cabecalho(self, pedido_id, emitido_em):
+
         try:
-            self.image("logo_solobom.png", x=10, y=13, w=25)
+            self.image("logo_solobom.png", x=10, y=13, w=25)  # x, y em mm, w = largura
         except:
-            pass
+            pass  # se não encontrar, ignora
         self.set_font("Helvetica", "B", 14)
         self.cell(0, 8, "PEDIDO DE VENDA", ln=1, align="C")
         self.set_font("Helvetica", "", 10)
@@ -70,14 +71,17 @@ class PedidoPDF(FPDF):
         for (vk, vv), (ck, cv) in zip(v_items, c_items):
             x_start = self.l_margin
             y_start = self.get_y()
+            # Vendedor
             self.set_xy(x_start, y_start)
             self.multi_cell(col_width, line_height, f"{vk}: {vv}", border=0)
+            # Comprador
             self.set_xy(x_start + col_width + 10, y_start)
             self.multi_cell(col_width, line_height, f"{ck}: {cv}", border=0)
             self.set_y(max(self.get_y(), y_start + line_height))
         self.ln(4)
 
     def tabela_condicoes(self, condicoes: dict):
+        # Transformar em duas colunas
         self._tabela_dupla("Detalhes Entrega/Pagamento", condicoes, {})
 
     def _tabela_dupla(self, titulo, esquerda: dict, direita: dict):
@@ -109,6 +113,7 @@ class PedidoPDF(FPDF):
         self.ln(4)
 
     def pix(self):
+        # Transformar em duas colunas
         self.ln(10)
         self.set_font("Helvetica", "", 10)
         self.multi_cell(0, 5, "\n PIX: mtq341370045@grupomantiqueira.com.br (Mantiqueira Alimentos Ltda.)")
@@ -126,8 +131,8 @@ class PedidoPDF(FPDF):
             self.cell(sum(widths), 8, "Nenhum item informado.", border=1, ln=1, align="C")
             return
         for i, row in enumerate(df.itertuples(), 1):
-            qtd = float(getattr(row, "Qtd_Kg", 0) or 0)
-            vu  = float(getattr(row, "Valor_Unitario", 0) or 0)
+            qtd = float_pt(getattr(row, "Qtd(Kg)", 0))
+            vu  = float_pt(getattr(row, "Valor_Unitario", 0))
             sub = qtd * vu
             self.cell(widths[0], 7, str(i), border=1, align="C")
             self.cell(widths[1], 7, str(getattr(row, "Descrição", ""))[:50], border=1)
@@ -145,10 +150,13 @@ class PedidoPDF(FPDF):
     def assinaturas(self):
         y = self.get_y()
         w = 80
+        #self.line(15, y+18, 15+w, y+18)
         self.set_xy(15, y+20)
+        
         self.line(110, y+18, 110+w, y+18)
         self.set_xy(110, y+20)
         self.cell(w, 6, "Assinatura do Cliente", align="C")
+        #self.cell(w, 6, "Assinatura MAnt", align="C")
         self.ln(25)
         self.set_font("Helvetica", "", 8)
         self.multi_cell(0, 5, "Ao assinar, o cliente confirma ciência de valores, prazos e condições descritas neste pedido.")
@@ -159,65 +167,45 @@ st.title("🧾 Gerador de Pedido de Venda")
 with st.form("form_pedido"):
     # Vendedor
     st.subheader("Empresa (Vendedor)")
-    cidade = st.selectbox("Granja:", ["PRIMAVERA","CAMPANHA"], key="granja")
     col1, col2 = st.columns(2)
 
-    if cidade == "PRIMAVERA":
-        default_nome = "MANTIQUEIRA ALIMENTOS S/A"
-        default_cnpj = "04.747.794/0008-89"
-        default_end  = "Rodovia MT 130, Km 15 + 1 Km à Esquerda"
-        key_suffix = "primavera"
-    else:
-        default_nome = "MANTIQUEIRA ALIMENTOS S/A"
-        default_cnpj = "04.747.794/0002-93"
-        default_end  = "Rodovia Fernão Dias (BR 381), S/N"
-        key_suffix = "campanha"
-
-    emp_nome    = col1.text_input("Razão Social / Nome Fantasia", default_nome, key=f"emp_nome_{key_suffix}")
-    emp_cnpj    = col2.text_input("CNPJ/CPF", default_cnpj, key=f"emp_cnpj_{key_suffix}")
-    emp_end     = st.text_input("Endereço", default_end, key=f"emp_end_{key_suffix}")
-    emp_contato = st.text_input("Contato (e-mail/telefone)", key=f"emp_contato_{key_suffix}")
+    emp_nome   = col1.text_input("Razão Social / Nome Fantasia", "MANTIQUEIRA ALIMENTOS S/A", key="emp_nome")
+    emp_cnpj   = col2.text_input("CNPJ/CPF", "04.747.794/0008-89", key="emp_cnpj")
+    emp_end    = st.text_input("Endereço", "Rodovia MT 130, Km 15 + 1 Km à Esquerda", key="emp_end")
+    emp_contato= st.text_input("Contato (e-mail/telefone)", key="emp_contato")
 
     # Comprador
     st.subheader("Cliente (Comprador)")
     col1, col2 = st.columns(2)
-    cli_nome    = col1.text_input("Nome/Razão Social", key="cli_nome")
-    cli_doc     = col2.text_input("CNPJ/CPF", key="cli_doc")
-    cli_end     = st.text_input("Endereço", key="cli_end")
-    ins_est     = st.text_input("Inscrição Estadual", key="ins_est")
-    cli_contato = st.text_input("Contato (e-mail/telefone)", key="cli_contato")
+    cli_nome   = col1.text_input("Nome/Razão Social" , key="cli_nome")
+    cli_doc    = col2.text_input("CNPJ/CPF", key="cli_doc")
+    cli_end    = st.text_input("Endereço", key="cli_end")
+    cli_contato= st.text_input("Contato (e-mail/telefone)", key="cli_contato")
 
     # Condições
     st.subheader("Detalhes Entrega/Pagamento")
-    col1, col2, col3, col4 = st.columns(4)
-    produto   = col1.selectbox("Produto Safra:", ["Milho", "Soja"], key="produto")
-    pagamento = col2.date_input("Data de pagamento:", key="pagamento")
+    col1, col2, col3 = st.columns(3)
+    produto    = col1.selectbox("Produto Safra:", ["Milho", "Soja"], key="produto")
+    pagamento  = col2.date_input("Data de pagamento:", key="pagamento", format="DD/MM/YYYY")
     pagamento = pagamento.strftime("%d/%m/%Y")
-    entrega   = col3.date_input("Data de entrega:", key="entrega")
-    entrega   = entrega.strftime("%d/%m/%Y")
-    frete     = col4.selectbox("Tipo Frete:", ["CIF", "FOB"], key="frete")
-    obs       = st.text_area("Observações Entrega/Pagamento", key="obs")
-    dados_banc = st.text_area("Dados Bancários:", "\n Itaú Unibanco S.A (Cód.: 341) \n Agência: 3032 \n C. Corrente: 37004-5", key="banc")
+    entrega    = col3.date_input("Data de entrega:", key="entrega", format="DD/MM/YYYY")
+    entrega = entrega.strftime("%d/%m/%Y")
+    obs        = st.text_area("Dados Bancários:", "\n Itaú Unibanco S.A (Cód.: 341) \n Agência: 3032 \n C. Corrente: 37004-5", key="obs")
 
     # Itens
     st.subheader("Itens do Pedido")
     df_itens = st.data_editor(
-        pd.DataFrame([{"Descrição": "Produto A", "Qtd_Kg": 1, "Valor_Unitario": 100.00}]),
+        pd.DataFrame([{"Descrição": "Produto A", "Qtd(Kg)": 1, "Valor_Unitario": 100.00}]),
         num_rows="dynamic",
         use_container_width=True,
         column_config={
-            "Descrição": st.column_config.SelectboxColumn(
-                "Descrição",
-                options=["Esterco", "Mistura Condensada"],
-                required=True
-            ),
-            "Qtd_Kg": st.column_config.NumberColumn("Qtd(Kg)", min_value=0.0, step=0.01, format="%.2f"),
+            "Descrição": st.column_config.TextColumn("Descrição", required=True),
+            "Qtd(Kg)": st.column_config.NumberColumn("Qtd(Kg)", min_value=0.0, step=0.01, format="%.2f"),
             "Valor_Unitario": st.column_config.NumberColumn("Valor_Unitario", min_value=0.0, step=0.01, format="%.2f"),
         },
         key="grid_itens"
     )
 
-    # Submit
     enviado = st.form_submit_button("Gerar PDF")
 
 if enviado:
@@ -225,29 +213,35 @@ if enviado:
     pedido_id = numero_pedido()
     emitido_em = datetime.now().strftime("%d/%m/%Y")
 
-    # Gerar PDF
+    # PDF
     pdf = PedidoPDF()
     pdf.cabecalho(pedido_id, emitido_em)
+
     pdf.tabela_comprador_vendedor(
         vendedor={"Empresa": emp_nome, "CNPJ/CPF": emp_cnpj, "Endereço": emp_end, "Contato": emp_contato},
-        comprador={"Nome/Razão Social": cli_nome, "CNPJ/CPF": cli_doc, "Endereço": cli_end, "Inscrição": ins_est, "Contato": cli_contato}
+        comprador={"Nome/Razão Social": cli_nome, "CNPJ/CPF": cli_doc, "Endereço": cli_end, "Contato": cli_contato}
     )
+
     pdf.tabela_condicoes({
         "Produto Safra": produto,
         "Data de pagamento": pagamento,
         "Data de entrega": entrega,
-        "Frete": frete,
-        "Observações": obs,
-        "Dados Bancários": dados_banc
+        "Observações": obs
     })
+
     pdf.pix()
+
     pdf.tabela_itens(df_itens)
     pdf.total(total)
     pdf.assinaturas()
 
-    pdf_bytes = pdf.output(dest="S").encode('latin1')
+    # Gerar PDF só em memória
+    pdf_bytes = bytes(pdf.output(dest="S"))
 
+    # Preview no Streamlit
     st.pdf(pdf_bytes, height=500, key="preview_pdf")
+
+    # Botão de download
     st.download_button(
         "⬇️ Baixar PDF do Pedido",
         data=pdf_bytes,
