@@ -116,7 +116,13 @@ class PedidoPDF(FPDF):
         # Transformar em duas colunas
         self.ln(10)
         self.set_font("Helvetica", "", 10)
+        self.set_draw_color(200, 200, 200)
+        self.line(10, self.get_y(), 200, self.get_y())
+        self.ln(2)
         self.multi_cell(0, 5, "Dados Bancários: \n Itaú Unibanco S.A (Cód.: 341)   Agência: 3032   C. Corrente: 37004-5 \nPIX: mtq341370045@grupomantiqueira.com.br (Mantiqueira Alimentos Ltda.) \n")
+        self.set_draw_color(200, 200, 200)
+        self.line(10, self.get_y(), 200, self.get_y())
+        self.ln(2)
 
     def tabela_itens(self, df):
         self.set_font("Arial", "B", 9)
