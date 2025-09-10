@@ -82,7 +82,7 @@ class PedidoPDF(FPDF):
 
     def tabela_condicoes(self, condicoes: dict):
         # Transformar em duas colunas
-        self._tabela_dupla("Detalhes Entrega/Pagamento", condicoes, {})
+        self._tabela_dupla("Condições de Pagamento", condicoes, {})
 
     def _tabela_dupla(self, titulo, esquerda: dict, direita: dict):
         self.set_font("Helvetica", "B", 11)
@@ -139,7 +139,7 @@ class PedidoPDF(FPDF):
         total = 0
         for i, row in enumerate(df.itertuples(index=False), 1):
             desc = str(row[0])[:50]     # Descrição
-            qtd  = float(row[1]) or 0   # Qtd(Kg)
+            qtd  = float(row[1]) or 0   # Qtd(ton.)
             vu   = float(row[2]) or 0   # Valor_Unitario
             sub  = qtd * vu
             total += sub
@@ -201,8 +201,9 @@ with st.form("form_pedido"):
 
     # Condições
     st.subheader("Detalhes Entrega/Pagamento")
+    tipo_pagamento = st.selectbox("Forma Pagamento:", ["À Vista", "À Prazo"], key="tipo_pagamento")
     col1, col2, col3, col4 = st.columns(4)
-    produto    = col1.selectbox("Produto Safra:", ["Milho", "Soja"], key="produto")
+    produto    = col1.selectbox("Barter:", ["Milho", "Milheto", "Sorgo"], key="produto")
     pagamento  = col2.date_input("Data de pagamento:", key="pagamento", format="DD/MM/YYYY")
     pagamento = pagamento.strftime("%d/%m/%Y")
     entrega    = col3.date_input("Data de entrega:", key="entrega", format="DD/MM/YYYY")
@@ -244,7 +245,8 @@ if enviado:
     )
 
     pdf.tabela_condicoes({
-        "Produto Safra": produto,
+        "Forma Pagamento": tipo_pagamento,
+        "Barter": produto,
         "Data de pagamento": pagamento,
         "Data de entrega": entrega,
         "Frete": frete,
