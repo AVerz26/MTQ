@@ -191,12 +191,13 @@ with st.form("form_pedido"):
 
     # Condições
     st.subheader("Detalhes Entrega/Pagamento")
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
     produto    = col1.selectbox("Produto Safra:", ["Milho", "Soja"], key="produto")
     pagamento  = col2.date_input("Data de pagamento:", key="pagamento", format="DD/MM/YYYY")
     pagamento = pagamento.strftime("%d/%m/%Y")
     entrega    = col3.date_input("Data de entrega:", key="entrega", format="DD/MM/YYYY")
     entrega = entrega.strftime("%d/%m/%Y")
+    frete   = col4.selectbox("Tipo Frete:", ["CIF", "FOB"], key="frete")
     obs        = st.text_area("Dados Bancários:", "\n Itaú Unibanco S.A (Cód.: 341) \n Agência: 3032 \n C. Corrente: 37004-5", key="obs")
 
     # Itens
@@ -213,7 +214,7 @@ with st.form("form_pedido"):
         key="grid_itens"
     )
 
-    st.write("Colunas do DF:", df_itens.columns.tolist())
+    
 
 
     enviado = st.form_submit_button("Gerar PDF")
@@ -236,6 +237,7 @@ if enviado:
         "Produto Safra": produto,
         "Data de pagamento": pagamento,
         "Data de entrega": entrega,
+        "Frete": frete,
         "Observações": obs
     })
 
