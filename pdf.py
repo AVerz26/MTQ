@@ -114,12 +114,13 @@ class PedidoPDF(FPDF):
 
     def pix(self):
         # Transformar em duas colunas
-        self.ln(10)
+        self.ln(4)
         self.set_font("Helvetica", "", 10)
+        self.cell(0, 7, "Dados Bancários", ln=1)
         self.set_draw_color(200, 200, 200)
         self.line(10, self.get_y(), 200, self.get_y())
         self.ln(2)
-        self.multi_cell(0, 5, "Dados Bancários: \n Itaú Unibanco S.A (Cód.: 341)   Agência: 3032   C. Corrente: 37004-5 \nPIX: mtq341370045@grupomantiqueira.com.br (Mantiqueira Alimentos Ltda.) \n")
+        self.multi_cell(0, 5, "\n Itaú Unibanco S.A (Cód.: 341)   Agência: 3032   C. Corrente: 37004-5 \nPIX: mtq341370045@grupomantiqueira.com.br (Mantiqueira Alimentos Ltda.) \n")
         self.set_draw_color(200, 200, 200)
         self.line(10, self.get_y(), 200, self.get_y())
         self.ln(2)
