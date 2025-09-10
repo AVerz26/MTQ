@@ -214,7 +214,7 @@ with st.form("form_pedido"):
     # Itens
     st.subheader("Itens do Pedido")
     df_itens = st.data_editor(
-        pd.DataFrame([{"Descrição": "Produto A", "Qtd(ton.)": 1, "Valor_Unitario": 100.00}]),
+        pd.DataFrame([{"Descrição": "COMPOSTO ORGÂNICO", "Qtd(ton.)": 1, "Valor_Unitario": 100.00}]),
         num_rows="dynamic",
         use_container_width=True,
         column_config={
