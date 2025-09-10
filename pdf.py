@@ -130,9 +130,9 @@ class PedidoPDF(FPDF):
         if df.empty:
             self.cell(sum(widths), 8, "Nenhum item informado.", border=1, ln=1, align="C")
             return
-        for i, row in enumerate(df.itertuples(), 1):
-            qtd = float_pt(getattr(row, "Qtd(Kg)", 0))
-            vu  = float_pt(getattr(row, "Valor_Unitario", 0))
+        for i, row in enumerate(df.itertuples(index=False), 1):
+            qtd = float_pt(row._asdict().get("Qtd(Kg)", 0))
+            vu  = float_pt(row._asdict().get("Valor_Unitario", 0))
             sub = qtd * vu
             self.cell(widths[0], 7, str(i), border=1, align="C")
             self.cell(widths[1], 7, str(getattr(row, "Descrição", ""))[:50], border=1)
