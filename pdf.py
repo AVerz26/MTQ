@@ -124,7 +124,7 @@ class PedidoPDF(FPDF):
         self.set_draw_color(200, 200, 200)
         self.ln(2)
         self.line(10, self.get_y(), 200, self.get_y())
-        self.ln(4)
+        self.ln(6)
 
     def tabela_itens(self, df):
         self.set_font("Arial", "B", 9)
