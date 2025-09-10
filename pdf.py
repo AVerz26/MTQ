@@ -203,7 +203,7 @@ with st.form("form_pedido"):
     st.subheader("Detalhes Entrega/Pagamento")
     tipo_pagamento = st.selectbox("Forma Pagamento:", ["À Vista", "À Prazo"], key="tipo_pagamento")
     col1, col2, col3, col4 = st.columns(4)
-    produto    = col1.selectbox("Barter:", ["Milho", "Milheto", "Sorgo"], key="produto")
+    produto    = col1.selectbox("Barter:", ["", "Milho", "Milheto", "Sorgo"], key="produto")
     pagamento  = col2.date_input("Data de pagamento:", key="pagamento", format="DD/MM/YYYY")
     pagamento = pagamento.strftime("%d/%m/%Y")
     entrega    = col3.date_input("Data de entrega:", key="entrega", format="DD/MM/YYYY")
