@@ -209,6 +209,9 @@ with st.form("form_pedido"):
         key="grid_itens"
     )
 
+    st.write("Colunas do DF:", df_itens.columns.tolist())
+
+
     enviado = st.form_submit_button("Gerar PDF")
 
 if enviado:
