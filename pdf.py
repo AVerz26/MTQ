@@ -235,12 +235,19 @@ if enviado:
     pdf.total(total)
     pdf.assinaturas()
 
+    import tempfile
+    import base64
+    
     # Gerar PDF só em memória
-    pdf_bytes = pdf.output(dest="S")
-
-    # Preview no Streamlit
-    st.pdf(pdf_bytes, height=500, key="preview_pdf")
-
+    pdf_bytes = pdf.output(dest="S").encode("latin1")  # precisa ser bytes mesmo
+    
+    # Preview no Streamlit (salva temp)
+    with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
+        tmp.write(pdf_bytes)
+        tmp_path = tmp.name
+    
+    st.pdf(tmp_path, height=500, key="preview_pdf")
+    
     # Botão de download
     st.download_button(
         "⬇️ Baixar PDF do Pedido",
