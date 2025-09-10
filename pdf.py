@@ -195,6 +195,7 @@ with st.form("form_pedido"):
     cli_nome   = col1.text_input("Nome/Razão Social" , key="cli_nome")
     cli_doc    = col2.text_input("CNPJ/CPF", key="cli_doc")
     cli_end    = st.text_input("Endereço", key="cli_end")
+    cli_insc   = st.text_input("I/E:", key="cli_insc")
     cli_contato= st.text_input("Contato (e-mail/telefone)", key="cli_contato")
 
     # Condições
@@ -238,7 +239,7 @@ if enviado:
 
     pdf.tabela_comprador_vendedor(
         vendedor={"Empresa": emp_nome, "CNPJ/CPF": emp_cnpj, "Endereço": emp_end, "Contato": emp_contato},
-        comprador={"Nome/Razão Social": cli_nome, "CNPJ/CPF": cli_doc, "Endereço": cli_end, "Contato": cli_contato}
+        comprador={"Nome/Razão Social": cli_nome, "CNPJ/CPF": cli_doc, "Endereço": cli_end, "I/E": cli_insc, "Contato": cli_contato}
     )
 
     pdf.tabela_condicoes({
