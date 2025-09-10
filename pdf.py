@@ -188,6 +188,7 @@ with st.form("form_pedido"):
     emp_cnpj   = col2.text_input("CNPJ/CPF", "04.747.794/0008-89", key="emp_cnpj")
     emp_end    = st.text_input("Endereço", "Rodovia MT 130, Km 15 + 1 Km à Esquerda", key="emp_end")
     emp_contato= st.text_input("Contato (e-mail/telefone)", key="emp_contato")
+    emp_res    = st.text_input("Vendedor:", key="emp_vendedor")
 
     # Comprador
     st.subheader("Cliente (Comprador)")
@@ -238,7 +239,7 @@ if enviado:
     pdf.cabecalho(pedido_id, emitido_em)
 
     pdf.tabela_comprador_vendedor(
-        vendedor={"Empresa": emp_nome, "CNPJ/CPF": emp_cnpj, "Endereço": emp_end, "Contato": emp_contato},
+        vendedor={"Empresa": emp_nome, "CNPJ/CPF": emp_cnpj, "Endereço": emp_end, "Contato": emp_contato, "Vendedor": emp_res},
         comprador={"Nome/Razão Social": cli_nome, "CNPJ/CPF": cli_doc, "Endereço": cli_end, "I/E": cli_insc, "Contato": cli_contato}
     )
 
