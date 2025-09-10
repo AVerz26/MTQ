@@ -185,7 +185,7 @@ with st.form("form_pedido"):
     col1, col2 = st.columns(2)
 
     emp_nome   = col1.text_input("Razão Social / Nome Fantasia", "MANTIQUEIRA ALIMENTOS S/A", key="emp_nome")
-    emp_cnpj   = col2.text_input("CNPJ/CPF", "04.747.794/0008-89", key="emp_cnpj")
+    emp_cnpj   = col2.text_input("CNPJ/CPF", "04.747.794/0003-74", key="emp_cnpj")
     emp_end    = st.text_input("Endereço", "Rodovia MT 130, Km 15 + 1 Km à Esquerda", key="emp_end")
     emp_contato= st.text_input("Contato (e-mail/telefone)", key="emp_contato")
     emp_res    = st.text_input("Vendedor:", key="emp_vendedor")
