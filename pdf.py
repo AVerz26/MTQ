@@ -119,31 +119,35 @@ class PedidoPDF(FPDF):
         self.multi_cell(0, 5, "\n PIX: mtq341370045@grupomantiqueira.com.br (Mantiqueira Alimentos Ltda.)")
 
     def tabela_itens(self, df):
-        self.ln(10)
-        self.set_font("Helvetica", "B", 10)
-        cols = ["Item", "Descrição", "Qtd(Kg)", "Valor_Unitario", "Subtotal"]
-        widths = [15, 90, 20, 30, 30]
-        for c, w in zip(cols, widths):
-            self.cell(w, 7, c, border=1, align="C")
+        self.set_font("Arial", "B", 9)
+        colunas = ["Item", "Descrição", "Qtd(Kg)", "Valor_Unitario", "Subtotal"]
+        widths = [10, 80, 20, 30, 30]
+    
+        for i, col in enumerate(colunas):
+            self.cell(widths[i], 7, col, border=1, align="C")
         self.ln()
-        self.set_font("Helvetica", "", 10)
-        if df.empty:
-            self.cell(sum(widths), 8, "Nenhum item informado.", border=1, ln=1, align="C")
-            return
+    
+        self.set_font("Arial", "", 9)
+        total = 0
         for i, row in enumerate(df.itertuples(index=False), 1):
-            row_dict = row._asdict()
-            qtd = float_pt(row_dict.get("Qtd(Kg)", 0))
-            vu  = float_pt(row_dict.get("Valor_Unitario", 0))
-            sub = qtd * vu
-        
+            desc = str(row[0])[:50]     # Descrição
+            qtd  = float(row[1]) or 0   # Qtd(Kg)
+            vu   = float(row[2]) or 0   # Valor_Unitario
+            sub  = qtd * vu
+            total += sub
+    
             self.cell(widths[0], 7, str(i), border=1, align="C")
-            self.cell(widths[1], 7, str(row_dict.get("Descrição", ""))[:50], border=1)
+            self.cell(widths[1], 7, desc, border=1)
             self.cell(widths[2], 7, f"{qtd:g}", border=1, align="R")
             self.cell(widths[3], 7, moeda(vu), border=1, align="R")
             self.cell(widths[4], 7, moeda(sub), border=1, align="R")
             self.ln()
-
-        self.ln(2)
+    
+        self.set_font("Arial", "B", 10)
+        self.cell(sum(widths[:-1]), 7, "TOTAL:", border=0, align="R")
+        self.cell(widths[-1], 7, moeda(total), border=0, align="R")
+        self.ln(10)
+    
 
     def total(self, valor):
         self.set_font("Helvetica", "B", 11)
