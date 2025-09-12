@@ -112,6 +112,11 @@ class PedidoPDF(FPDF):
             self.set_y(max(self.get_y(), y_start + line_height))
         self.ln(4)
 
+    def observacoes(self, texto):
+        self.set_font("Helvetica", "", 10)
+        self.multi_cell(0, 6, texto)  # largura 0 = largura total da página (menos margens)
+        self.ln(4)
+
     def pix(self):
         # Transformar em duas colunas
         self.ln(8)
@@ -250,9 +255,10 @@ if enviado:
         "Barter": produto,
         "Data de pagamento": pagamento,
         "Data de entrega": entrega,
-        "Frete": frete,
-        "Observações": obs
+        "Frete": frete
     })
+
+    pdf.observacoes(obs)
 
     pdf.pix()
 
