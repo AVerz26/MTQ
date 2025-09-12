@@ -114,7 +114,7 @@ class PedidoPDF(FPDF):
 
     def pix(self):
         # Transformar em duas colunas
-        self.ln(6)
+        self.ln(8)
         self.set_font("Helvetica", "B", 11)
         self.cell(0, 7, "Dados Bancários", ln=1)
         self.set_draw_color(200, 200, 200)
