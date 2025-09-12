@@ -114,8 +114,7 @@ class PedidoPDF(FPDF):
 
     def observacoes(self, texto):
         self.set_font("Helvetica", "", 10)
-        self.multi_cell(0, 6, texto)  # largura 0 = largura total da página (menos margens)
-        self.ln(4)
+        self.multi_cell(0, 6, f"Observações: {texto}")
 
     def pix(self):
         # Transformar em duas colunas
